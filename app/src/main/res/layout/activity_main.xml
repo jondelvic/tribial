@@ -5,15 +5,80 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white">
 
-    <TextView
+    <!-- Header -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:paddingStart="40dp"
+        android:paddingTop="30dp"
+        android:paddingEnd="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_logo"
+            android:maxWidth="120dp"
+            android:maxHeight="120dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+        <!-- Welcome Message -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <!-- "Welcome to" -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-10dp"
+                android:fontFamily="@font/space_grotesk_light"
+                android:includeFontPadding="false"
+                android:text="@string/welcome_message"
+                android:textColor="@color/primary_color"
+                android:textSize="15sp" />
+
+            <!-- "TRIBIAL" -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-10dp"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:includeFontPadding="false"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_color"
+                android:textSize="50sp" />
+
+            <!-- "An informative app about the Indigenous People of the Cordilleras" -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk"
+                android:includeFontPadding="false"
+                android:text="@string/tagline"
+                android:textColor="@color/primary_color"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+        <!-- End of Welcome Message -->
+
+    </LinearLayout>
+    <!-- End of Header -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

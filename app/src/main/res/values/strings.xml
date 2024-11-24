@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Tribial</string>
+    <string name="tribial">TRIBIAL</string>
+    <string name="app_logo">app_logo</string>
+    <string name="welcome_message">Welcome to</string>
+    <string name="tagline">An informative app about the Indigenous People of the Cordilleras</string>
+    <string name="divider">divider</string>
 </resources>

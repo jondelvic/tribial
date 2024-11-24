@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Tribial" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
+        <item name="android:background">@color/white</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
@@ -10,7 +11,7 @@
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/secondary_color</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/logo_splash</item>
-        <item name="postSplashScreenTheme">@style/Theme.Material3.DayNight.NoActionBar</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.Tribial</item>
     </style>
 
 </resources>
