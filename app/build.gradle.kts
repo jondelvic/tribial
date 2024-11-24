@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.tribial"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.tribial"
@@ -40,4 +40,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(libs.core.splashscreen) // Used for splash screen
+
 }
