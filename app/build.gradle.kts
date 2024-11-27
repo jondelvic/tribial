@@ -45,5 +45,5 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation(libs.core.splashscreen) // Used for splash screen
-    implementation(libs.glide)
+    implementation(libs.glide) // Used for carousel
 }
