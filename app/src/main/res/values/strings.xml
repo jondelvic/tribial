@@ -5,4 +5,6 @@
     <string name="welcome_message">Welcome to</string>
     <string name="tagline">An informative app about the Indigenous People of the Cordilleras</string>
     <string name="divider">divider</string>
+    <string name="feature_header_1">Cordillera IP Groups</string>
+    <string name="arrow_right">arrow_right</string>
 </resources>

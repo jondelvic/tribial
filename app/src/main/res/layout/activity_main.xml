@@ -81,4 +81,47 @@
     </LinearLayout>
     <!-- End of Header -->
 
+    <!-- Feature Header 1 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.252" >
+
+        <!-- Cordillera IP Groups -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/space_grotesk_bold"
+            android:text="@string/feature_header_1"
+            android:textColor="@color/primary_color"
+            android:textSize="20sp"
+            android:layout_marginStart="30dp"/>
+
+        <!-- View All Button -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/space_grotesk_medium"
+            android:text="View All"
+            android:textColor="@color/primary_color"
+            android:layout_marginStart="66dp"/>
+
+        <!--Arrow Right Button -->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/arrow_right"
+            android:src="@drawable/arrow_right_button"
+            android:backgroundTint="@color/white"
+            android:paddingTop="12dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"/>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

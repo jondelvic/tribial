@@ -10,10 +10,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.splashscreen.SplashScreen;
 
+import com.example.tribial.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
     private boolean keep = true;
     private final int duration = 1250;
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
