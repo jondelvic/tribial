@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedViewActivity">
+
+    <ImageView
+        android:id="@+id/banner_photo"
+        android:contentDescription="Image from yodisphere.com"
+        android:scaleType="centerCrop"
+        android:layout_width="470dp"
+        android:layout_height="257dp"
+        android:src="@drawable/bontoc_group"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/space_grotesk_bold"
+        android:paddingStart="25dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="25dp"
+        android:text="@string/bontoc"
+        android:textColor="@color/primary_color"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner_photo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

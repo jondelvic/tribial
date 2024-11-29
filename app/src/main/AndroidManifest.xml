@@ -17,6 +17,9 @@
         android:theme="@style/Base.Theme.Tribial.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".DetailedViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".MapsActivity"
             android:exported="false" />
         <activity
