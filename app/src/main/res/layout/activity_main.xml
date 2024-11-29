@@ -323,64 +323,6 @@
         </LinearLayout>
         <!-- End of Archive Section 2 -->
 
-        <!-- Archive Section 3-->
-        <!--<LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/archive_2"
-            android:id="@+id/archive_3"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="127dp"
-                android:layout_height="127dp"
-                android:src="@drawable/macmurray_thumbnail" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="10dp">
-
-                &lt;!&ndash; Title &ndash;&gt;
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Igorots - Macmurray Collection 1926"
-                    android:fontFamily="@font/space_grotesk_semibold"
-                    android:textColor="@color/primary_color"
-                    />
-
-                &lt;!&ndash; Description &ndash;&gt;
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="10sp"
-                    android:paddingTop="7dp"
-                    android:layout_marginEnd="18dp"
-                    android:fontFamily="@font/space_grotesk"
-                    android:textColor="@color/black"
-                    android:text="A rare footage of the local Igorots dancing for John V.A. MacMurray during a festival on October 9, 1926." />
-
-                <Button
-                    android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="34dp"
-                    android:backgroundTint="@color/primary_color"
-                    android:text="Watch Video"
-                    android:textAllCaps="false"
-                    android:textSize="9sp"
-                    android:fontFamily="@font/space_grotesk_bold"
-                    android:textColor="@color/white"/>
-
-            </LinearLayout>
-
-        </LinearLayout>-->
-        <!-- End of Archive Section 3-->
-
         <!-- Feature Header 3 -->
         <LinearLayout
             android:id="@+id/feature_3_header"
