@@ -7,4 +7,6 @@
     <string name="divider">divider</string>
     <string name="feature_header_1">Cordillera IP Groups</string>
     <string name="arrow_right">arrow_right</string>
+    <string name="feature_header_2">Cordillera IP Archives</string>
+    <string name="view_all_button">View All</string>
 </resources>

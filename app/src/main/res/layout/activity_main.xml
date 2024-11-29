@@ -1,144 +1,529 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.MaterialToolbar
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:id="@+id/toolbar"
-        android:background="@color/primary_color"
-        android:visibility="invisible">
-
-        <!-- Add hamburger menu here -->
-
-    </com.google.android.material.appbar.MaterialToolbar>
-
-    <LinearLayout
-        android:id="@+id/header"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingStart="40dp"
-        android:paddingTop="45dp"
-        android:paddingEnd="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        tools:context=".MainActivity"
+        android:background="@color/white">
 
-        <ImageView
-            android:id="@+id/logo"
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/toolbar"
+            android:background="@color/primary_color"
+            android:visibility="invisible">
+
+            <!-- Add hamburger menu here -->
+
+        </com.google.android.material.appbar.MaterialToolbar>
+        <!-- End of Toolbar -->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        </ScrollView>
+
+        <!-- Header -->
+        <LinearLayout
+            android:id="@+id/header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="25dp"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/app_logo"
-            android:maxWidth="120dp"
-            android:maxHeight="120dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/logo" />
+            android:paddingStart="40dp"
+            android:paddingTop="45dp"
+            android:paddingEnd="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_logo"
+                android:maxWidth="120dp"
+                android:maxHeight="120dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-10dp"
+                    android:fontFamily="@font/space_grotesk_light"
+                    android:includeFontPadding="false"
+                    android:text="@string/welcome_message"
+                    android:textColor="@color/primary_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-10dp"
+                    android:fontFamily="@font/space_grotesk_bold"
+                    android:includeFontPadding="false"
+                    android:text="@string/app_name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_color"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/space_grotesk"
+                    android:includeFontPadding="false"
+                    android:text="@string/tagline"
+                    android:textColor="@color/primary_color"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- End of Header-->
+
+        <!-- Feature 1 Header -->
+        <LinearLayout
+            android:id="@+id/feature_1_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_marginTop="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.122"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.252">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:text="@string/feature_header_2"
+                android:textColor="@color/primary_color"
+                android:textSize="15sp"
+                android:layout_marginStart="35dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_medium"
+                android:text="@string/view_all_button"
+                android:textSize="12sp"
+                android:textColor="@color/primary_color"
+                android:layout_marginStart="78dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/arrow_right"
+                android:src="@drawable/arrow_right_button"
+                android:backgroundTint="@color/white"
+                android:paddingTop="7dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+
+        </LinearLayout>
+        <!-- End of Feature 1 Header -->
+
+        <!-- Carousel -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_below="@id/feature_1_header"
+            android:id="@+id/recycler"
+            app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Feature 2 Header -->
+        <LinearLayout
+            android:id="@+id/feature_2_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recycler"
+            android:layout_marginTop="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.122"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.252">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:text="@string/feature_header_2"
+                android:textColor="@color/primary_color"
+                android:textSize="15sp"
+                android:layout_marginStart="35dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_medium"
+                android:text="@string/view_all_button"
+                android:textSize="12sp"
+                android:textColor="@color/primary_color"
+                android:layout_marginStart="78dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/arrow_right"
+                android:src="@drawable/arrow_right_button"
+                android:backgroundTint="@color/white"
+                android:paddingTop="7dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+
+        </LinearLayout>
+        <!-- End of Feature 2 Header -->
+
+        <!-- Archive Section 2-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feature_2_header"
+            android:layout_marginStart="30dp"
+            android:id="@+id/archive_1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="127dp"
+                android:layout_height="127dp"
+                android:src="@drawable/macmurray_thumbnail" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp">
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Igorots - Macmurray Collection 1926"
+                    android:fontFamily="@font/space_grotesk_semibold"
+                    android:textColor="@color/primary_color"
+                    />
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:paddingTop="7dp"
+                    android:layout_marginEnd="18dp"
+                    android:fontFamily="@font/space_grotesk"
+                    android:textColor="@color/black"
+                    android:text="A rare footage of the local Igorots dancing for John V.A. MacMurray during a festival on October 9, 1926." />
+
+                <Button
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:backgroundTint="@color/primary_color"
+                    android:text="Watch Video"
+                    android:textAllCaps="false"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/space_grotesk_bold"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- End of Archive Section -->
+
+        <!-- Archive Section 2-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/archive_1"
+            android:id="@+id/archive_2"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="127dp"
+                android:layout_height="127dp"
+                android:src="@drawable/hudhud_ifugao" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp">
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Hudhud Chants of Ifugao"
+                    android:fontFamily="@font/space_grotesk_semibold"
+                    android:textColor="@color/primary_color"
+                    />
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:paddingTop="7dp"
+                    android:layout_marginEnd="18dp"
+                    android:fontFamily="@font/space_grotesk"
+                    android:textColor="@color/black"
+                    android:text="A short documentary about the narrative chants performed by the Ifugao community." />
+
+                <Button
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:backgroundTint="@color/primary_color"
+                    android:text="Watch Video"
+                    android:textAllCaps="false"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/space_grotesk_bold"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- End of Archive Section 2 -->
+
+        <!-- Archive Section 3-->
+        <!--<LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/archive_2"
+            android:id="@+id/archive_3"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="127dp"
+                android:layout_height="127dp"
+                android:src="@drawable/macmurray_thumbnail" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp">
+
+                &lt;!&ndash; Title &ndash;&gt;
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Igorots - Macmurray Collection 1926"
+                    android:fontFamily="@font/space_grotesk_semibold"
+                    android:textColor="@color/primary_color"
+                    />
+
+                &lt;!&ndash; Description &ndash;&gt;
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:paddingTop="7dp"
+                    android:layout_marginEnd="18dp"
+                    android:fontFamily="@font/space_grotesk"
+                    android:textColor="@color/black"
+                    android:text="A rare footage of the local Igorots dancing for John V.A. MacMurray during a festival on October 9, 1926." />
+
+                <Button
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:backgroundTint="@color/primary_color"
+                    android:text="Watch Video"
+                    android:textAllCaps="false"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/space_grotesk_bold"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>-->
+        <!-- End of Archive Section 3-->
+
+        <!-- Feature Header 3 -->
+        <LinearLayout
+            android:id="@+id/feature_3_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/archive_2"
+            android:layout_marginTop="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.122"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.252">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:text="Event Calendar"
+                android:textColor="@color/primary_color"
+                android:textSize="15sp"
+                android:layout_marginStart="35dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_medium"
+                android:text="@string/view_all_button"
+                android:textSize="12sp"
+                android:textColor="@color/primary_color"
+                android:layout_marginStart="115dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/arrow_right"
+                android:src="@drawable/arrow_right_button"
+                android:backgroundTint="@color/white"
+                android:paddingTop="7dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+
+        </LinearLayout>
+        <!-- End of Feature Header 3 -->
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical">
+            android:layout_below="@id/feature_3_header"
+            android:layout_marginStart="23dp"
+            android:orientation="horizontal"
+            android:id="@+id/calendar_highlights">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="-10dp"
-                android:fontFamily="@font/space_grotesk_light"
-                android:includeFontPadding="false"
-                android:text="@string/welcome_message"
-                android:textColor="@color/primary_color"
-                android:textSize="15sp" />
+                android:orientation="vertical"
+                android:layout_marginEnd="15dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="-10dp"
-                android:fontFamily="@font/space_grotesk_bold"
-                android:includeFontPadding="false"
-                android:text="@string/app_name"
-                android:textAllCaps="true"
-                android:textColor="@color/primary_color"
-                android:textSize="50sp" />
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/event"
+                    android:paddingBottom="10dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/event3"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/space_grotesk"
-                android:includeFontPadding="false"
-                android:text="@string/tagline"
-                android:textColor="@color/primary_color"
-                android:textSize="11sp" />
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/event2"
+                    android:paddingBottom="10dp"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <!-- Carousel -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_below="@id/header"
-        android:id="@+id/recycler"
-        app:layoutManager="com.google.android.material.carousel.CarouselLayoutManager"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"/>
-
-    <!--&lt;!&ndash; Header &ndash;&gt;
-
-
-    &lt;!&ndash; Feature Header 1 &ndash;&gt;
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252">
-
-        &lt;!&ndash; Cordillera IP Groups &ndash;&gt;
-        <TextView
+        <LinearLayout
+            android:id="@+id/feature_4_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/space_grotesk_bold"
-            android:text="@string/feature_header_1"
-            android:textColor="@color/primary_color"
-            android:textSize="20sp"
-            android:layout_marginStart="30dp"/>
+            android:layout_below="@id/calendar_highlights"
+            android:layout_marginTop="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.122"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.252">
 
-        &lt;!&ndash; View All Button &ndash;&gt;
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/space_grotesk_medium"
-            android:text="View All"
-            android:textColor="@color/primary_color"
-            android:layout_marginStart="66dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_bold"
+                android:text="Significant IP Locations"
+                android:textColor="@color/primary_color"
+                android:textSize="15sp"
+                android:layout_marginStart="35dp"/>
 
-        &lt;!&ndash;Arrow Right Button &ndash;&gt;
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/arrow_right"
-            android:src="@drawable/arrow_right_button"
-            android:backgroundTint="@color/white"
-            android:paddingTop="12dp"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/space_grotesk_medium"
+                android:text="@string/view_all_button"
+                android:textSize="12sp"
+                android:textColor="@color/primary_color"
+                android:layout_marginStart="50dp"/>
 
-    </LinearLayout>-->
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/arrow_right"
+                android:src="@drawable/arrow_right_button"
+                android:backgroundTint="@color/white"
+                android:paddingTop="7dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
 
-</RelativeLayout>
+        </LinearLayout>
+
+        <!--Fragment for the map preview-->
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/map"
+            android:layout_below="@id/feature_4_header"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    </RelativeLayout>
+
+</ScrollView>
+
