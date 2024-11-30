@@ -23,6 +23,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:id="@+id/ip_group_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/space_grotesk_bold"
@@ -34,6 +35,17 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/banner_photo" />
+
+    <TextView
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/space_grotesk_light"
+        android:text="@string/bontoc_desc"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ip_group_name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
