@@ -6,21 +6,39 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailedViewActivity">
+    tools:context=".BontocDetailedActivity"
+    android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/banner_photo"
-        android:contentDescription="Image from yodisphere.com"
-        android:scaleType="centerCrop"
-        android:layout_width="470dp"
-        android:layout_height="257dp"
-        android:src="@drawable/bontoc_group"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/banner">
+
+        <ImageView
+            android:id="@+id/banner_photo"
+            android:contentDescription="Image from yodisphere.com"
+            android:scaleType="centerCrop"
+            android:layout_width="470dp"
+            android:layout_height="257dp"
+            android:src="@drawable/bontoc_group"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginStart="10dp"
+            android:padding="20dp"
+            android:scaleX="-1"
+            android:src="@drawable/arrow_right_button_white" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/ip_group_name"
@@ -34,18 +52,21 @@
         android:textColor="@color/primary_color"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/banner_photo" />
+        app:layout_constraintTop_toBottomOf="@id/banner" />
 
+    <!-- Description -->
     <TextView
         android:layout_width="355dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
+        android:paddingEnd="35dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/space_grotesk_light"
         android:text="@string/bontoc_desc"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ip_group_name" />
+        app:layout_constraintTop_toBottomOf="@id/ip_group_name"
+        android:textColor="@color/black"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

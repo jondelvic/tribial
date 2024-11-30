@@ -73,6 +73,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     public interface OnItemClickListener {
         void onClick(ImageView imageView, Drawable integer);
+
+        void onClick(ImageView imageView, Drawable img, int position);
     }
 
 }

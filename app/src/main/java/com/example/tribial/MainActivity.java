@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -60,6 +63,15 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         recyclerView.setAdapter(adapter);
 
+        // Audio Visual Section
+        Button watchVideo = findViewById(R.id.watch_video_btn);
+
+        watchVideo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PlayerActivity.class));
+            }
+        });
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -81,20 +93,29 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.addMarker(new MarkerOptions().position(new LatLng(17.080997755592357, 120.90573450430661)).title("Hanging Coffins of Sagada"));
     }
 
-
     @NonNull
     private ImageAdapter getImageAdapter() {
+
         ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(R.drawable.bontoc);
         arrayList.add(R.drawable.ifugao_elders_in_tradtional_dress);
         arrayList.add(R.drawable.apayao_isneg);
 
         ImageAdapter adapter = new ImageAdapter(MainActivity.this, arrayList);
+
         adapter.setOnItemClickListener(new ImageAdapter.OnItemClickListener() {
+
             @Override
-            public void onClick(ImageView imageView, Drawable integer) {
-                startActivity(new Intent(MainActivity.this, ImageViewActivity.class).putExtra("image", (CharSequence) integer), ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, imageView, "image").toBundle());
+            public void onClick(ImageView imageView, Drawable img) {
+                startActivity(new Intent(MainActivity.this, BontocDetailedActivity.class).putExtra("image", (CharSequence) img),
+                        ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, imageView, "image").toBundle());
             }
+
+            @Override
+            public void onClick(ImageView imageView, Drawable img, int position) {
+
+            }
+
         });
         return adapter;
     }
